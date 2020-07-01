@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: eu.gcr.io/kyma-project/incubator/develop/jaeger-operator
+  repository: moss-harbor.qiyi.domain/kyma/incubator/develop/jaeger-operator
   tag: 1.17.1-fe39dbe9
   pullPolicy: IfNotPresent
   imagePullSecrets: []

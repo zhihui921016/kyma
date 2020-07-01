@@ -1,5 +1,5 @@
 containerRegistry:
-  path: eu.gcr.io/kyma-project
+  path: moss-harbor.qiyi.domain/kyma
 xip_patch:
   dir:
   version: d022112f

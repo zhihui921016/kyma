@@ -71,7 +71,7 @@ spec:
       restartPolicy: Never
       containers:
         - name: {{ .Release.Name }}-pre-upgrade
-          image: eu.gcr.io/kyma-project/test-infra/alpine-kubectl:v20200507-070ff576
+          image: moss-harbor.qiyi.domain/kyma/alpine-kubectl:v20200507-070ff576
           command:
             - "/bin/bash"
           args:

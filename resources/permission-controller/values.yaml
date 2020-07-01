@@ -1,5 +1,5 @@
 image:
-  repository: eu.gcr.io/kyma-project/permission-controller
+  repository: moss-harbor.qiyi.domain/kyma/permission-controller
   tag: PR-7459
   pullPolicy: IfNotPresent
 

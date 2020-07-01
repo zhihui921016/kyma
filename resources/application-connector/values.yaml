@@ -24,7 +24,7 @@ global:
       nameMtls: kyma-gateway-application-connector
       namespace: kyma-system
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   application_operator:
     version: "1066324c"
   application_operator_tests:

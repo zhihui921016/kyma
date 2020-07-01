@@ -16,7 +16,7 @@ minio:
     persistence: "true"
 
 image:
-  repository: eu.gcr.io/kyma-project/rafter-upload-service
+  repository: moss-harbor.qiyi.domain/rafter-upload-service
   tag: 3778b2ec
   pullPolicy: IfNotPresent
 
@@ -115,7 +115,7 @@ envs:
 migrator:
   images:
     alpineKubectl:
-      repository: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+      repository: moss-harbor.qiyi.domain/kyma/alpine-kubectl
       tag: 'v20200617-32c1f3ff'
       pullPolicy: IfNotPresent
     minioClient:

@@ -1,7 +1,7 @@
 webhook:
   replicaCount: 1
   image:
-    repository: eu.gcr.io/kyma-project/incubator/develop/podpreset-webhook
+    repository: moss-harbor.qiyi.domain/kyma/podpreset-webhook
     tag: 6fe6c8dc
     pullPolicy: IfNotPresent
   verbosity: 6
@@ -11,6 +11,6 @@ webhook:
 controller:
   enabled: false
   image:
-    repository: eu.gcr.io/kyma-project/incubator/develop/podpreset-controller
+    repository: moss-harbor.qiyi.domain/kyma/podpreset-controller
     tag: 6fe6c8dc
     pullPolicy: IfNotPresent

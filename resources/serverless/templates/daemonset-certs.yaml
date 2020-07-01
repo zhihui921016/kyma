@@ -48,7 +48,7 @@ spec:
           name: scripts
       containers:
         - name: pause
-          image: gcr.io/google-containers/pause-amd64:3.2
+          image: moss-harbor.qiyi.domain/kyma/pause-amd64:3.2
           resources:
             requests:
               cpu: 20m

@@ -1,6 +1,6 @@
 jobs:
   image:
-    repository: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+    repository: moss-harbor.qiyi.domain/kyma/alpine-kubectl
     tag: "v20200617-32c1f3ff"
 
 global:
@@ -8,10 +8,10 @@ global:
   disableLegacyConnectivity: false
 
 containerRegistry:
-  path: eu.gcr.io/kyma-project
+  path: moss-harbor.qiyi.domain/kyma
 
 image:
-  repository: eu.gcr.io/kyma-project/incubator/develop/api-gateway-controller
+  repository: moss-harbor.qiyi.domain/kyma/api-gateway-controller
   tag: "978664da"
   # Image pull policy
   pullPolicy: IfNotPresent

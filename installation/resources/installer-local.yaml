@@ -117,7 +117,7 @@ spec:
       serviceAccountName: kyma-installer
       initContainers:
       - name: 2to3
-        image: eu.gcr.io/kyma-project/test-infra/alpine-kubectl:v20200617-32c1f3ff
+        image: moss-harbor.qiyi.domain/kyma/alpine-kubectl:v20200617-32c1f3ff
         terminationMessagePolicy: "FallbackToLogsOnError"
         command:
         - /bin/bash

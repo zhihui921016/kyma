@@ -54,7 +54,7 @@ global:
   # temporary value
   domainTemplate: "{{.Name}}-{{.Namespace}}.{{.Domain}}"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   test_knative_serving_acceptance:
     dir: 
     version: "7dd25b42"

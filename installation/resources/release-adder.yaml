@@ -41,7 +41,7 @@ spec:
           serviceAccountName: kyma-release-adder
           containers:
           - name: kyma-release-adder-container
-            image: eu.gcr.io/kyma-project/release-adder:0.1.0
+            image: moss-harbor.qiyi.domain/kyma/release-adder:0.1.0
             imagePullPolicy: IfNotPresent
             env:
               - name: BLOB_ACCOUNT_NAME

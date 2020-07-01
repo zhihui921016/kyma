@@ -392,7 +392,7 @@ metadata:
   name: queue-proxy
   namespace: knative-serving
 spec:
-  image: gcr.io/knative-releases/knative.dev/serving/cmd/queue:{{ .Values.global.version }}
+  image: moss-harbor.qiyi.domain/knative/serving-queue:{{ .Values.global.version }}
 
 ---
 apiVersion: apps/v1
@@ -440,7 +440,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/activator@sha256:3b530bbcf892aff098444ae529a9d4150dfd0cd35c97babebd90eedae34ad8af
+        image: moss-harbor.qiyi.domain/knative/activator:0.15.0
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -524,7 +524,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa@sha256:a3941ff9d5bdd728ae6aabdf6c52a2e05888654cfbf9ac26aa8f3e091dbdd30c
+        image: moss-harbor.qiyi.domain/knative/autoscaler-hpa:0.15.0
         name: autoscaler-hpa
         ports:
         - containerPort: 9090
@@ -600,7 +600,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler@sha256:bd125e90fffb44b843a183aa00f481cddee2317c0cfde9151c2482c5c2a8ed71
+        image: moss-harbor.qiyi.domain/knative/autoscaler:0.15.0
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -848,8 +848,8 @@ data:
 
     # List of repositories for which tag to digest resolving should be skipped
     registriesSkippingTagResolving: "ko.local,dev.local"
-  queueSidecarImage: gcr.io/knative-releases/knative.dev/serving/cmd/queue@sha256:f32c20456c6349a4fe99c83060009c7e9f6ba0c644ef854a04514e1f8aca982e
-  registriesSkippingTagResolving: "registry.{{ .Values.global.ingress.domainName }}"
+  queueSidecarImage: moss-harbor.qiyi.domain/knative/queue:0.15.0
+  registriesSkippingTagResolving: "moss-harbor.qiyi.domain"
 kind: ConfigMap
 metadata:
   labels:
@@ -1326,7 +1326,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/controller@sha256:71f7c9f101e7e30e82a86d203fb98d6fa607c8d6ac2fcb73fd1defd365795223
+        image: moss-harbor.qiyi.domain/knative/controller:0.15.0
         name: controller
         ports:
         - containerPort: 9090
@@ -1391,7 +1391,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-nightly/knative.dev/net-istio/cmd/controller@sha256:94b126adb14d2a8c5b25d2908b0da83210f2a271258ba8bbd1a39177f56f54a6
+        image: moss-harbor.qiyi.domain/knative/net-istio-controller:0.15.0
         name: networking-istio
         ports:
         - containerPort: 9090
@@ -1440,7 +1440,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/webhook@sha256:90562a10f5e37965f4f3332b0412afec1cf3dd1c06caed530213ca0603e52082
+        image: moss-harbor.qiyi.domain/knative/webhook:0.15.0
         name: webhook
         ports:
         - containerPort: 9090
@@ -1531,7 +1531,7 @@ spec:
       - name: webhook
         # This is the Go import path for the binary that is containerized
         # and substituted here.
-        image: gcr.io/knative-nightly/knative.dev/net-istio/cmd/webhook@sha256:51c017906194d39107eafe865d55c91b1b19c3c436eacc1130e2fea1df70829a
+        image: moss-harbor.qiyi.domain/knative/istio-webhook:0.15.0
         resources:
           requests:
             cpu: 20m

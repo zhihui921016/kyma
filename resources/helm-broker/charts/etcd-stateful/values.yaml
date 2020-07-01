@@ -1,5 +1,5 @@
 etcd:
-  image: "eu.gcr.io/kyma-project/external/quay.io/coreos/etcd"
+  image: "moss-harbor.qiyi.domain/kyma/external/quay.io/coreos/etcd"
   imageTag: "v3.3.18"
   secure: false
   resources:

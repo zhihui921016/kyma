@@ -6,7 +6,7 @@ nameOverride:
 fullnameOverride:
 
 image:
-  repository: "eu.gcr.io/kyma-project/function-webhook"
+  repository: "moss-harbor.qiyi.domain/kyma/function-webhook"
   tag: "1cc47db6"
   pullPolicy: IfNotPresent
 

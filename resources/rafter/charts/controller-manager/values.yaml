@@ -11,7 +11,7 @@ minio:
   secretKey: ""
 
 image:
-  repository: eu.gcr.io/kyma-project/rafter-controller-manager
+  repository: moss-harbor.qiyi.domain/kyma/rafter-controller-manager
   tag: 3778b2ec
   pullPolicy: IfNotPresent
 

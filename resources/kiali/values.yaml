@@ -11,7 +11,7 @@ global:
       name: kyma-gateway
       namespace: kyma-system
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   alpine_net:
     name: alpine-net
     dir:
@@ -38,7 +38,7 @@ kcproxy:
 kiali:
   operator:
     image:
-      repository: eu.gcr.io/kyma-project/incubator/develop/kiali-operator
+      repository: moss-harbor.qiyi.domain/kyma/incubator/develop/kiali-operator
       tag: 1.19.0-371eb0b2
       pullPolicy: IfNotPresent
     resources:

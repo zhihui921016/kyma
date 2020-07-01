@@ -15,7 +15,7 @@ global:
     # Example: kymaOrgName: "kyma-incubator"
   kymaOrgName: "kyma-project"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   istio:
     gateway:
       name: kyma-gateway

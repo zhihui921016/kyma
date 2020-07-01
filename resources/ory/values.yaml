@@ -48,7 +48,7 @@ hpa:
 # Maintenance options
 maintenance:
   image:
-    name: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+    name: moss-harbor.qiyi.domain/kyma/alpine-kubectl
     tag: "v20200617-32c1f3ff"
 
 # Overrides for the Hydra chart
@@ -93,7 +93,7 @@ hydra:
 # Overrides for the Oathkeeper chart
 oathkeeper:
   kubectlJob:
-    image: eu.gcr.io/kyma-project/test-infra/alpine-kubectl:v20200617-32c1f3ff
+    image: moss-harbor.qiyi.domain/kyma/alpine-kubectl:v20200617-32c1f3ff
   oathkeeper:
     config:
       authenticators:

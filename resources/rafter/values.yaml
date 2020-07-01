@@ -7,7 +7,7 @@ global:
 tests:
   enabled: true
   image:
-    repository: "eu.gcr.io/kyma-project/rafter-test"
+    repository: "moss-harbor.qiyi.domain/kyma/rafter-test"
     tag: 7dd25b42
     pullPolicy: IfNotPresent
   disableConcurrency: true
@@ -26,7 +26,7 @@ controller-manager:
   fullnameOverride: "rafter-controller-manager"
 
   image:
-    repository: eu.gcr.io/kyma-project/rafter-controller-manager
+    repository: moss-harbor.qiyi.domain/kyma/rafter-controller-manager
     tag: 1a89277a
     pullPolicy: IfNotPresent
 
@@ -192,7 +192,7 @@ controller-manager:
 
     image:
       tag: RELEASE.2019-10-12T01-39-57Z-a67baaa0
-      repository: eu.gcr.io/kyma-project/incubator/develop/minio/minio
+      repository: moss-harbor.qiyi.domain/kyma/incubator/develop/minio/minio
 
     persistence:
       enabled: true
@@ -245,7 +245,7 @@ upload-service:
       size: 10Gi
 
   image:
-    repository: eu.gcr.io/kyma-project/rafter-upload-service
+    repository: moss-harbor.qiyi.domain/kyma/rafter-upload-service
     tag: 1a89277a
     pullPolicy: IfNotPresent
 
@@ -333,11 +333,11 @@ upload-service:
   migrator:
     images:
       alpineKubectl:
-        repository: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+        repository: moss-harbor.qiyi.domain/kyma/alpine-kubectl
         tag: 'v20200617-32c1f3ff'
         pullPolicy: IfNotPresent
       minioClient:
-        repository: eu.gcr.io/kyma-project/incubator/develop/minio/mc
+        repository: moss-harbor.qiyi.domain/kyma/incubator/develop/minio/mc
         tag: RELEASE.2019-04-03T17-59-57Z-a67baaa0
         pullPolicy: IfNotPresent
     pre:
@@ -352,7 +352,7 @@ front-matter-service:
   fullnameOverride: "rafter-front-matter-service"
 
   image:
-    repository: eu.gcr.io/kyma-project/rafter-front-matter-service
+    repository: moss-harbor.qiyi.domain/kyma/rafter-front-matter-service
     tag: 1a89277a
     pullPolicy: IfNotPresent
 
@@ -389,7 +389,7 @@ asyncapi-service:
   fullnameOverride: "rafter-asyncapi-service"
 
   image:
-    repository: eu.gcr.io/kyma-project/rafter-asyncapi-service
+    repository: moss-harbor.qiyi.domain/rafter-asyncapi-service
     tag: 1a89277a
     pullPolicy: IfNotPresent
 

@@ -6,7 +6,7 @@ deployment:
   nodeSelector: {}
 images:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   ui:
     dir:
     version: 7683fcdb

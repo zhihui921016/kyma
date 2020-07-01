@@ -2765,16 +2765,16 @@ spec:
         - name: METRICS_DOMAIN
           value: knative.dev/eventing
         - name: BROKER_INGRESS_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/ingress@sha256:a5d7802baaba82c3076043c521b57676fa4620929cf953dc38615897bc29961f
+          value: moss-harbor.qiyi.domain/knative/eventing-ingress:0.12.0
         - name: BROKER_INGRESS_SERVICE_ACCOUNT
           value: eventing-broker-ingress
         - name: BROKER_FILTER_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/broker/filter@sha256:fb4d8340421469e7f211c09f707527ed802beb1bd40e5caf5cb986cf51376ec5
+          value: moss-harbor.qiyi.domain/knative/eventing-filter:0.12.0
         - name: BROKER_FILTER_SERVICE_ACCOUNT
           value: eventing-broker-filter
         - name: BROKER_IMAGE_PULL_SECRET_NAME
           value: null
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/controller@sha256:50b978ff05dae87567751dfe46cc187cfb44cc4e49fe8b6747732492c2c2a81c
+        image: moss-harbor.qiyi.domain/knative/eventing-controller:0.12.0
         name: eventing-controller
         ports:
         - containerPort: 9090
@@ -2831,10 +2831,10 @@ spec:
         - name: METRICS_DOMAIN
           value: knative.dev/sources
         - name: CRONJOB_RA_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/cronjob_receive_adapter@sha256:dc51ff713fadee0a88da50e12a8215ba93f653fc8379b55792d6b79125e12b1a
+          value: moss-harbor.qiyi.domain/knative/cronjob_receive_adapter:0.12.0
         - name: APISERVER_RA_IMAGE
-          value: gcr.io/knative-releases/knative.dev/eventing/cmd/apiserver_receive_adapter@sha256:82924047d88cb2c362b1bbb0cc0b0a986288918db5e9a4bfd09ede5b4a9f27a2
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/sources_controller@sha256:fa2e3e098d5c601a8319bccb9ee75c6bc2c84308478e17969f21ed0db6e950d8
+          value: moss-harbor.qiyi.domain/knative/apiserver_receive_adapter:0.12.0
+        image: moss-harbor.qiyi.domain/knative/sources_controller:0.12.0
         name: controller
         ports:
         - containerPort: 9090
@@ -2988,7 +2988,7 @@ spec:
           value: knative.dev/eventing
         - name: WEBHOOK_NAME
           value: eventing-webhook
-        image: gcr.io/knative-releases/knative.dev/eventing/cmd/webhook@sha256:61f25fc16ded8a63b30e8b54c5730187e483856d3203840446e391a36c7e9950
+        image: moss-harbor.qiyi.domain/knative/eventing-webhook:0.12.0
         name: eventing-webhook
         resources:
           limits:

@@ -6,13 +6,13 @@ fullnameOverride: "serverless"
 
 injectCerts:
   image:
-    repository: 'eu.gcr.io/kyma-project/test-infra/alpine-kubectl'
+    repository: 'moss-harbor.qiyi.domain/kyma/test-infra/alpine-kubectl'
     tag: 'v20200617-32c1f3ff'
     pullPolicy: IfNotPresent
 
 knativeMigration:
   image:
-    repository: 'eu.gcr.io/kyma-project/test-infra/alpine-kubectl'
+    repository: 'moss-harbor.qiyi.domain/kyma/alpine-kubectl'
     tag: 'v20200617-32c1f3ff'
     pullPolicy: IfNotPresent
 
@@ -28,14 +28,14 @@ tests:
         memory: 256Mi
         cpu: 200m
     image:
-      repository: "eu.gcr.io/kyma-project/test-infra/alpine-kubectl"
+      repository: "moss-harbor.qiyi.domain/kyma/alpine-kubectl"
       tag: "v20200617-32c1f3ff"
       pullPolicy: IfNotPresent
     namespace: "long-running-function-test"
     name: longrun
 
   image:
-    repository: "eu.gcr.io/kyma-project/function-controller-test"
+    repository: "moss-harbor.qiyi.domain/kyma/function-controller-test"
     tag: "7dd25b42"
     pullPolicy: IfNotPresent
   disableConcurrency: false
@@ -67,11 +67,11 @@ global:
 
 images:
   manager:
-    repository: "eu.gcr.io/kyma-project/function-controller"
+    repository: "moss-harbor.qiyi.domain/kyma/function-controller"
     tag: "1cc47db6"
     pullPolicy: IfNotPresent
   functionRuntimeNodejs12:
-    repository: "eu.gcr.io/kyma-project/function-runtime-nodejs12"
+    repository: "moss-harbor.qiyi.domain/kyma/function-runtime-nodejs12"
     tag: "1cc47db6"
 
 deployment:
@@ -129,9 +129,9 @@ containers:
       functionBuildExecutorArgs:
         value: "--insecure,--skip-tls-verify,--skip-unused-stages,--log-format=text,--cache=true"
       functionBuildExecutorImage:
-        value: gcr.io/kaniko-project/executor:v0.22.0
+        value: moss-harbor.qiyi.domain/knative/kaniko-executor:v0.22.0
       functionBuildCredsInitImage:
-        value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init:v0.12.1
+        value: moss-harbor.qiyi.domain/knative/tekton-creds-init:v0.12.1
       functionDockerAddress:
         # TODO: I don't know why {{ .Values.global.dockerServicePort }} doesn't work. It is rendered as {{\n  .Values.global.dockerServicePort }}
         # value: "{{ template \"registry-fullname\" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.global.dockerServicePort }}"

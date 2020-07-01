@@ -40,7 +40,7 @@ global:
     gateway:
       name: kyma-gateway
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   xip_patch:
     dir:
     version: PR-8619

@@ -8,7 +8,7 @@ global:
     namespaceAdminGroup: runtimeNamespaceAdmin
 
 image:
-  registryPath: eu.gcr.io/kyma-project
+  registryPath: moss-harbor.qiyi.domain/kyma
   pullPolicy: IfNotPresent
   version: "c65c6b3d"
 

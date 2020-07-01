@@ -37,7 +37,7 @@ loki:
     # log.level: debug
 
   image:
-    repository: grafana/loki
+    repository: moss-harbor.qiyi.domain/kyma/grafana/loki
     tag: 1.5.0
     pullPolicy: IfNotPresent
 
@@ -222,7 +222,7 @@ loki:
 
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   logging_integration_tests:
     name: logging-integration-tests
     dir: 

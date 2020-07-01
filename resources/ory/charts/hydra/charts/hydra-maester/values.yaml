@@ -2,7 +2,7 @@ replicaCount: 1
 
 jobs:
   image:
-    repository: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+    repository: moss-harbor.qiyi.domain/kyma/alpine-kubectl
     tag: "v20200617-32c1f3ff"
 
 config:
