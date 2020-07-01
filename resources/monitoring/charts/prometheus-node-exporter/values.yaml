@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: eu.gcr.io/kyma-project/incubator/develop/node-exporter
+  repository: moss-harbor.qiyi.domain/kyma/incubator/develop/node-exporter
   tag: 0.18.1-6f374cc6
   pullPolicy: IfNotPresent
 

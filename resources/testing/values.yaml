@@ -1,6 +1,6 @@
 global:
   octopus:
     image:
-      registry: eu.gcr.io/kyma-project/incubator
-      dir: develop/
+      registry: moss-harbor.qiyi.domain/kyma
+      dir:
       version: 4da23e03

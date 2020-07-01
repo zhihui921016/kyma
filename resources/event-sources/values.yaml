@@ -2,7 +2,7 @@ resources/event-sources/templates/500-sources-controller:
   yaml:
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   controllerManager:
     name: controller-manager
     image: event-sources-controller-manager

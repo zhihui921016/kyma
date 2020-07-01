@@ -4,10 +4,10 @@ kyma:
     - istio-system
     - kube-system
   labelJob:
-    image: eu.gcr.io/kyma-project/test-infra/alpine-kubectl
+    image: moss-harbor.qiyi.domain/kyma/alpine-kubectl
     tag: "v20200310-5f52f407"
 
 istio:
   installer:
-    image: eu.gcr.io/kyma-project/istio-installer
+    image: moss-harbor.qiyi.domain/kyma/istio-installer
     tag: "ce7e3510"

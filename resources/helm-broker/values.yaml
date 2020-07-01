@@ -40,7 +40,7 @@ defautlAddonsURL: "https://github.com/kyma-project/addons/releases/download/0.12
 
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   # develop mode allows use insecure (http) url for addons configuration
   isDevelopMode: false
   # image pull policy for helm broker broker/controller containers

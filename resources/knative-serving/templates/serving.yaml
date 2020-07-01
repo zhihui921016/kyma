@@ -467,7 +467,7 @@ metadata:
   name: queue-proxy
   namespace: knative-serving
 spec:
-  image: gcr.io/knative-releases/knative.dev/serving/cmd/queue:{{ .Values.global.version }}
+  image: moss-harbor.qiyi.domain/knative/serving-queue:{{ .Values.global.version }}
 
 ---
 apiVersion: apps/v1
@@ -515,7 +515,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/activator:{{ .Values.global.version }}
+        image: moss-harbor.qiyi.domain/knative/activator:0.15.0
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -614,7 +614,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa:{{ .Values.global.version }}
+        image: moss-harbor.qiyi.domain/knative/autoscaler-hpa:0.15.0
         name: autoscaler-hpa
         ports:
         - containerPort: 9090
@@ -705,7 +705,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler:{{ .Values.global.version }}
+        image: moss-harbor.qiyi.domain/knative/autoscaler:0.15.0
         livenessProbe:
           httpGet:
             httpHeaders:
@@ -968,8 +968,8 @@ data:
 
     # List of repositories for which tag to digest resolving should be skipped
     registriesSkippingTagResolving: "ko.local,dev.local"
-  queueSidecarImage: "gcr.io/knative-releases/knative.dev/serving/cmd/queue:{{ .Values.global.version }}"
-  registriesSkippingTagResolving: "registry.{{ .Values.global.ingress.domainName }}"
+  queueSidecarImage: "moss-harbor.qiyi.domain/knative/queue:0.15.0"
+  registriesSkippingTagResolving: "moss-harbor.qiyi.domain"
 kind: ConfigMap
 metadata:
   labels:
@@ -1446,7 +1446,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: "gcr.io/knative-releases/knative.dev/serving/cmd/controller:{{ .Values.global.version }}"
+        image: "moss-harbor.qiyi.domain/knative/controller:0.15.0"
         name: controller
         ports:
         - containerPort: 9090
@@ -1526,7 +1526,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: "gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio:{{ .Values.global.version }}"
+        image: "moss-harbor.qiyi.domain/knative/net-istio-controller:0.15.0"
         name: networking-istio
         ports:
         - containerPort: 9090
@@ -1590,7 +1590,7 @@ spec:
           value: knative.dev/serving
         - name: KUBERNETES_MIN_VERSION
           value: "{{ .Values.global.kubernetes_minimum_version }}"
-        image: "gcr.io/knative-releases/knative.dev/serving/cmd/webhook:{{ .Values.global.version }}"
+        image: "moss-harbor.qiyi.domain/knative/webhook:0.15.0"
         name: webhook
         ports:
         - containerPort: 9090

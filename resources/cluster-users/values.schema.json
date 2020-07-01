@@ -818,7 +818,7 @@
           },
           "isLocalEnv": false,
           "containerRegistry": {
-            "path": "eu.gcr.io/kyma-project"
+            "path": "moss-harbor.qiyi.domain/kyma"
           }
         }
       ],
@@ -900,7 +900,7 @@
           "default": {},
           "examples": [
             {
-              "path": "eu.gcr.io/kyma-project"
+              "path": "moss-harbor.qiyi.domain/kyma"
             }
           ],
           "additionalProperties": true,
@@ -912,7 +912,7 @@
               "description": "",
               "default": "",
               "examples": [
-                "eu.gcr.io/kyma-project"
+                "moss-harbor.qiyi.domain/kyma"
               ]
             }
           }

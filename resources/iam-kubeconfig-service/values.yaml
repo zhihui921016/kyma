@@ -15,7 +15,7 @@ global:
     gateway:
       name: kyma-gateway
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   iam_kubeconfig_service:
     dir:
     version: b4ca26d4

@@ -1,4 +1,4 @@
-imageRegistry: "eu.gcr.io/kyma-project/incubator/develop"
+imageRegistry: "moss-harbor.qiyi.domain/kyma/incubator/develop"
 
 replicaCount: 1
 
@@ -85,7 +85,7 @@ global:
     dir:
     version: 3b88aaaf
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   dex_integration_tests:
     dir:
     version: 47b606f6

@@ -6,7 +6,7 @@ nameOverride:
 fullnameOverride:
 
 image:
-  repository: eu.gcr.io/kyma-project/rafter-front-matter-service
+  repository: moss-harbor.qiyi.domain/kyma/rafter-front-matter-service
   tag: 3778b2ec
   pullPolicy: IfNotPresent
 

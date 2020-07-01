@@ -78,7 +78,11 @@ spec:
               done
               echo "Maximum retries exceeded"
               exit 1
+<<<<<<< HEAD
           image: eu.gcr.io/kyma-project/test-infra/alpine-kubectl:v20200310-5f52f407
+=======
+          image: moss-harbor.qiyi.domain/kyma/alpine-kubectl:v20200617-32c1f3ff
+>>>>>>> 452192b38... change images to harbor registry
           name: gardener-annotate
       restartPolicy: Never
       serviceAccountName: {{ template "name" . }}-ssl-helper-service-account

@@ -6,14 +6,14 @@ fullnameOverride: "serverless"
 
 bindingsMigration:
   image:
-    repository: 'eu.gcr.io/kyma-project/test-infra/alpine-kubectl'
+    repository: 'moss-harbor.qiyi.domain/kyma/test-infra/alpine-kubectl'
     tag: 'v20200310-5f52f407'
     pullPolicy: IfNotPresent
 
 tests:
   enabled: true
   image:
-    repository: "eu.gcr.io/kyma-project/function-controller-test"
+    repository: "moss-harbor.qiyi.domain/kyma/function-controller-test"
     tag: "PR-8542"
     pullPolicy: IfNotPresent
   disableConcurrency: false
@@ -53,15 +53,15 @@ global:
 
 images:
   manager:
-    repository: "eu.gcr.io/kyma-project/function-controller"
+    repository: "moss-harbor.qiyi.domain/kyma/function-controller"
     tag: "01eacd39"
     pullPolicy: IfNotPresent
   kubeRbacProxy:
-    repository: "gcr.io/kubebuilder/kube-rbac-proxy"
+    repository: "moss-harbor.qiyi.domain/kyma/kubebuilder/kube-rbac-proxy"
     tag: "v0.5.0"
     pullPolicy: IfNotPresent
   functionRuntimeNodejs12:
-    repository: "eu.gcr.io/kyma-project/function-runtime-nodejs12"
+    repository: "moss-harbor.qiyi.domain/kyma/function-runtime-nodejs12"
     tag: "a62f4a7f"  
 
 deployment:
@@ -117,9 +117,9 @@ containers:
       functionBuildExecutorArgs:
         value: "--insecure,--skip-tls-verify,--skip-unused-stages,--log-format=text,--cache=true"
       functionBuildExecutorImage:
-        value: gcr.io/kaniko-project/executor:v0.22.0
+        value: moss-harbor.qiyi.domain/knative/kaniko-executor:v0.22.0
       functionBuildCredsInitImage:
-        value: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init:v0.12.1
+        value: moss-harbor.qiyi.domain/knative/tekton-creds-init:v0.12.1
       functionDockerAddress:
         # TODO: I don't know why {{ .Values.global.dockerServicePort }} doesn't work. It is rendered as {{\n  .Values.global.dockerServicePort }}
         # value: "{{ template \"registry-fullname\" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.global.dockerServicePort }}"

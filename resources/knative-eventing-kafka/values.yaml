@@ -3,11 +3,11 @@
 # Declare variables to be passed into your templates.
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
 
 # Image Information
 image:
-  repository: eu.gcr.io/kyma-project/incubator
+  repository: moss-harbor.qiyi.domain/kyma/incubator
   controller: kafka-channel-controller
   dispatcher: knative-kafka-dispatcher
   channel: knative-kafka-channel

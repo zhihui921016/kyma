@@ -1,0 +1,27 @@
+dex:
+  tls:
+    createSecret: false
+
+console:
+  cluster:
+    headerLogoUrl: "assets/logo.svg"
+    headerTitle: ""
+    faviconUrl: "favicon.ico"
+
+global:
+  isLocalEnv: false
+  knative: false
+    # Change value below to your own GitHub user name if you want point to documentation sources from your fork
+    # Example: kymaOrgName: "kyma-incubator"
+  kymaOrgName: "kyma-project"
+  containerRegistry:
+    path: moss-harbor.qiyi.domain/kyma
+  istio:
+    gateway:
+      name: kyma-gateway
+  ui_acceptance_tests:
+    version: e0146b08
+  console_backend_service:
+    version: e77f8c23
+  console_backend_service_test:
+    version: e77f8c23

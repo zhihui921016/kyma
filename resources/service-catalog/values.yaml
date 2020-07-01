@@ -1,7 +1,7 @@
 global:
   isLocalEnv: false
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: moss-harbor.qiyi.domain/kyma
   istio:
     gateway:
       name: kyma-gateway

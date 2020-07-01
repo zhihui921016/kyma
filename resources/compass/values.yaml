@@ -11,7 +11,7 @@ global:
 
   images:
     containerRegistry:
-      path: eu.gcr.io/kyma-project/incubator
+      path: moss-harbor.qiyi.domain/kyma/incubator
     connector:
       dir:
       version: "d068b250"

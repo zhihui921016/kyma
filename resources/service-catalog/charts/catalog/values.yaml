@@ -1,6 +1,6 @@
 # Default values for Service Catalog
 # service-catalog image to use
-image: quay.io/kubernetes-service-catalog/service-catalog:v0.3.0-beta.2-6-g4690fae
+image: moss-harbor.qiyi.domain/kyma/external/quay.io/kubernetes-service-catalog/service-catalog:v0.3.0-beta.2-6-g4690fae
 # imagePullPolicy for the service-catalog; valid values are "IfNotPresent",
 # "Never", and "Always"
 imagePullPolicy: Always
@@ -124,4 +124,4 @@ securityContext: {}
 
 ## images for migration process
 migration:
-  alpineKcImage: eu.gcr.io/kyma-project/test-infra/alpine-kubectl:v20200310-5f52f407
+  alpineKcImage: moss-harbor.qiyi.domain/kyma/alpine-kubectl:v20200310-5f52f407
